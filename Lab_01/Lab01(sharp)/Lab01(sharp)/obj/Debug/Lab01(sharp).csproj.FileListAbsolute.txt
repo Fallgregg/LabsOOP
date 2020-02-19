@@ -1,0 +1,7 @@
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\bin\Debug\Lab01(sharp).exe.config
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\bin\Debug\Lab01(sharp).exe
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\bin\Debug\Lab01(sharp).pdb
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\obj\Debug\Lab01(sharp).csprojAssemblyReference.cache
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\obj\Debug\Lab01(sharp).csproj.CoreCompileInputs.cache
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\obj\Debug\Lab01(sharp).exe
+D:\KPI\1 course\2 smstr\OOP\Lab_01\Lab01(sharp)\Lab01(sharp)\obj\Debug\Lab01(sharp).pdb
