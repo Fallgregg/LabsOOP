@@ -1,68 +1,64 @@
 #include "TextLib.h"
 
-CustomString::CustomString(string str) {
+CustomString::CustomString(vector<char> str) {
 	this->str = str;
 }
 
-string CustomString::getStr() {
+CustomString::~CustomString() {
+	str.clear();
+}
+
+vector<char> CustomString::getStr() {
 	return str;
 }
 
-int CustomString::compare(string str2) {
-	return this->str.compare(str2);
-}
-
 int CustomString::size() {
-	return this->str.size();
+	return str.size();
 }
 
-int Text::size() {
-	return this->vect_str.size();
+vector<CustomString> Text::getText() {
+	return text;
 }
 
-void Text::addCustomString (CustomString customStr) {
-	this->vect_str.push_back(customStr);
-};
+void Text::addStr(CustomString str) {
+	text.push_back(str);
+}
 
-void Text::deleteCustomString(string str) {
-	for (auto it = vect_str.begin(); it != vect_str.end(); ++it) {
-		CustomString temp = *it;
-		if (temp.compare(str)) {
-			this->vect_str.erase(it);
+void Text::deleteCustomString(int i) {
+	text.erase(text.begin() + i); 
+}
+
+void Text::clear() {
+	text.clear();
+}
+
+CustomString Text::minStr() {
+	CustomString min = text[0];
+	for (int i = 0; i < text.size(); i++) {
+		//cout << text[i].size() << ' ' << min.size() << endl;
+		if (text[i].size() < min.size()) {
+			min = text[i];
 		}
 	}
+	return min;
 }
 
-void Text::clearCustomString() {
-	this->vect_str.clear();
-}
-
-string Text::returnMinStr() {
-	if (vect_str.size() == 0) {
-		return NULL;
+vector<char> Text::findFritstChars() {
+	vector<char> first_vect;
+	for (int i = 0; i < text.size(); i++) {
+		first_vect.push_back(text[i].getStr()[0]);
 	}
-
-	CustomString min = vect_str[0];
-	for (int i = 0; i < this->vect_str.size(); i++) {
-		if (this->vect_str[i].size() < min.size()) {
-			min = vect_str[i];
-		}
-	}
-	return min.getStr();
+	return first_vect;
 }
 
-int* Text::numberChar(char ch) {
-	int n = this->vect_str.size();
-	int* count_arr = new int[n];
+int Text::numberCharsInText(char ch) {
 	int count = 0;
-	for (int i = 0; i < n; i++) {
-		CustomString temp = vect_str[i];
-		for (int j = 0; j < temp.size(); j++) {
-			if (temp.getStr()[j] == ch) {
+	for (int i = 0; i < text.size(); i++) {
+		for (int j = 0; j < text[i].size(); j++) {
+			if (text[i].getStr()[j] == ch) {
 				count++;
 			}
 		}
-		count_arr[i] = count;
 	}
-	return count_arr;
+	return count;
 }
