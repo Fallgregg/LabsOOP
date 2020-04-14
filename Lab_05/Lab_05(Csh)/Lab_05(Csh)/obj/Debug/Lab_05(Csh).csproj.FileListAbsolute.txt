@@ -1,0 +1,7 @@
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\bin\Debug\Lab_05(Csh).exe.config
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\bin\Debug\Lab_05(Csh).exe
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\bin\Debug\Lab_05(Csh).pdb
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\obj\Debug\Lab_05(Csh).csprojAssemblyReference.cache
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\obj\Debug\Lab_05(Csh).csproj.CoreCompileInputs.cache
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\obj\Debug\Lab_05(Csh).exe
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_05\Lab_05(Csh)\Lab_05(Csh)\obj\Debug\Lab_05(Csh).pdb
