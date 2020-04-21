@@ -1,0 +1,4 @@
+﻿  Lab06(C++).cpp
+Lab06(C++).obj : error LNK2019: unresolved external symbol "public: __thiscall Exception::Exception(double,double,double,double)" (??0Exception@@QAE@NNNN@Z) referenced in function _main
+Lab06(C++).obj : error LNK2019: unresolved external symbol "public: double __thiscall Exception::value(void)" (?value@Exception@@QAENXZ) referenced in function _main
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_06\Lab06(C++)\Debug\Lab06(C++).exe : fatal error LNK1120: 2 unresolved externals

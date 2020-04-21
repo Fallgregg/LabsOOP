@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/KPI/1course/2smstr/OOP/LabsOOP/Lab_06/Lab06(C++)/Exception.cpp
+Exception.h
+D:/KPI/1course/2smstr/OOP/LabsOOP/Lab_06/Lab06(C++)/Exception.h
+
+D:/KPI/1course/2smstr/OOP/LabsOOP/Lab_06/Lab06(C++)/Exception.h
+math.h
+-
+iostream
+-
+windows.h
+-
+
+D:/KPI/1course/2smstr/OOP/LabsOOP/Lab_06/Lab06(C++)/main.cpp
+Exception.h
+D:/KPI/1course/2smstr/OOP/LabsOOP/Lab_06/Lab06(C++)/Exception.h
+
