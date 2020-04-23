@@ -1,4 +1,6 @@
 #include "MyClass.h"
+#include <windows.h>
+
 
 MyClass::MyClass() {
 	init();
@@ -30,6 +32,18 @@ void MyClass::init() {
 MyClass MyClass::operator +(MyClass first) {
 	MyClass result;
 	result.str = this->str;
+
+	try {
+		if (first.len == 0) {
+			throw "Entered string is empty";
+		}
+	}
+
+	catch (const char* ch) {
+		MessageBoxA(GetActiveWindow(), ch, "Error", MB_ICONERROR);
+		//exit(1);
+	}
+
 	for (int i = 0; i < first.len; i++) {
 		result.str.push_back(first.str[i]);
 	}
@@ -39,6 +53,8 @@ MyClass MyClass::operator +(MyClass first) {
 
 MyClass MyClass::operator /(int num) {
 	MyClass result;
+
+
 	vector<char> temp_str;
 	for (int i = 0; i < this->len; i++) {
 		if (i % num == 0) {
@@ -51,4 +67,3 @@ MyClass MyClass::operator /(int num) {
 	result.len = this->len;
 	return result;
 }
-

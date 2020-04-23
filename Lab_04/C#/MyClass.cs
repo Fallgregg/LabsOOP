@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MyClass {
+public class MyClass
+{
     private int len;
     private string str;
 
@@ -43,6 +44,11 @@ public class MyClass {
 
     public static MyClass operator +(MyClass first, MyClass second)
     {
+        if (first.str.Length == 0 || second.str.Length == 0)
+        {
+            throw new ArgumentNullException("Entered string is empty");
+        }
+
         MyClass result = new MyClass();
         result.str = first.str + second.str;
         return result;
@@ -50,6 +56,12 @@ public class MyClass {
 
     public static MyClass operator /(MyClass str_val, int num)
     {
+        if (str_val.str.Length == 0)
+        {
+            throw new ArgumentNullException("Entered string is empty");
+        }
+
+
         string temp_str = "";
         for (int i = 0; i < str_val.len; i++)
         {
@@ -62,5 +74,3 @@ public class MyClass {
         return str_val;
     }
 }
-
-
