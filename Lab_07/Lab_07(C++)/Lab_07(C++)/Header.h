@@ -1,17 +1,16 @@
 #include <iostream>
 using namespace std;
 
-class Node {
+struct Node {
+	short int elem;
+	int count;
+	Node* next;
 };
 
-class MyStruct{
-private:
-	int size();
-	Node head();
-	Node elem();
-public:
-	void push(short val);
-	int count();
-	void exchange();
-	void output();
-};
+typedef Node* PNode;
+
+PNode create(short int);
+void push(PNode&, short int);
+int count(PNode);
+void exchange(PNode&);
+void output(PNode);

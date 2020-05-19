@@ -1,51 +1,61 @@
 #include "Header.h"
 
-Node::Node() {
 
+
+PNode create(short int  val) {
+	PNode newNode = new Node;
+	newNode->elem = val;
+	newNode->count = 1;
+	newNode->next = NULL;
+	return newNode;
 }
 
-void MyStruct::push(short val) {
-	Node newNode = new Node();
-	this->value = val;
 
-	if (head == nullptr) {
-		head = newNode;
-	} else{
-		elem.next = newNode;
+void push(PNode& head, short elem)
+{
+	PNode node = create(elem);
+	PNode temp = head;
+	if (head == NULL) {
+		head = node;
+		return;
 	}
-
-	elem = newNode;
-	size++;
+	while (temp->next) {
+		temp = temp->next;
+	}
+	node->next = temp->next;
+	temp->next = node;
 }
 
-int MyStruct::count() {
+
+int count(PNode head) {
+	PNode temp = head;
 	int n = 0;
-	Node temp = head;
-	while (tnmp != nullptr) {
-		if (temp.value % 4 == 0) {
-			n += 1;
+	while (temp) {
+		if (temp->elem % 4 == 0) {
+			n++;
 		}
-		temp = temp.next;
+		temp = temp->next;
 	}
 	return n;
 }
 
-void MyStruct::exchange() {
-	Node temp = head;
+void exchange(PNode head) {
 	int n = 0;
-	while (temp != nullptr) {
+	PNode temp = head;
+	while (temp) {
 		if (n % 2 == 0) {
-			temp.value = 0;
+			temp->elem = 0;
 		}
-		temp = temp.next;
 		n++;
+		temp = temp->next;
 	}
 }
 
-void MyStruct::output() {
-	Node temp = head;
-	while (temp != nullptr) {
-		cout >> temp.value >> " ";
-		temp = temp.next;
+void output(PNode head) {
+	PNode temp = head;
+	while (temp) {
+		cout << temp->elem << " ";
+		temp = temp->next;
 	}
+	cout << endl;
 }

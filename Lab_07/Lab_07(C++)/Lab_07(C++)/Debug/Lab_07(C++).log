@@ -1,0 +1,7 @@
+﻿  Lab_07(C++).cpp
+  MyStruct.cpp
+  Generating Code...
+Lab_07(C++).obj : error LNK2019: unresolved external symbol "void __cdecl exchange(struct Node * &)" (?exchange@@YAXAAPAUNode@@@Z) referenced in function _main
+    Hint on symbols that are defined and could potentially match:
+      "void __cdecl exchange(struct Node *)" (?exchange@@YAXPAUNode@@@Z)
+D:\KPI\1course\2smstr\OOP\LabsOOP\Lab_07\Lab_07(C++)\Debug\Lab_07(C++).exe : fatal error LNK1120: 1 unresolved externals
