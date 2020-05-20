@@ -1,42 +1,25 @@
-#include "Header.h"
+#include "List.h"
 
 int main() {
+	Struct* test = new Struct();
+	int size = 0;
 
-	PNode head = NULL;
-	short int el;
-	int n;
-	short int add;
-	int size;
-
-	cout << "Enter first element: \n";
-	cin >> el;
-	head = create(el);
-
-	cout << "Enter number of elements in your list: ";
+	cout << "Enter number of elements: ";
 	cin >> size;
 
-	cout << "Enter element: \n";
 	for (int i = 0; i < size; i++) {
-		cin >> add;
-		if (add >= -32768 && add <= 32767) {
-			push(head, add);
-		}
+		test->push(rand() % 50 + 10);
 	}
 
 	cout << "List: \n";
-	output(head);
+	test->output();
+	
+	cout << "\nNumber of elements multiple 4: " << test->amount();
 
-	n = count(head);
-	cout << "\nNumber of elements multiple 4: " << n;
-
-	exchange(head);
-
-	cout << "\nNew list: ";
-	output(head);
+	cout << "\n\nList after exchanging: \n";
+	test->exchange();
+	test->output();
 
 	return 0;
 }
-
-
-
 	

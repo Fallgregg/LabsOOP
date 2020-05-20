@@ -1,37 +1,35 @@
-#include "Header.h"
+#include "List.h"
 
-
-
-PNode create(short int  val) {
-	PNode newNode = new Node;
-	newNode->elem = val;
-	newNode->count = 1;
-	newNode->next = NULL;
-	return newNode;
+Struct::Struct() {
+	this->head = nullptr;
+	this->tail = nullptr;
 }
 
-
-void push(PNode& head, short elem)
-{
-	PNode node = create(elem);
-	PNode temp = head;
-	if (head == NULL) {
-		head = node;
-		return;
+void Struct::push(short int data) {
+	Node* node = new Node(data);
+	if (this->head == nullptr) {
+		this->head = node;
+	} else {
+		this->tail->next = node;
+		node->prev = this->tail;
 	}
-	while (temp->next) {
+	this->tail = node;
+}
+
+void Struct::output() {
+	Node* temp = this->head;
+	while (temp != nullptr) {
+		cout << temp->value << " ";
 		temp = temp->next;
 	}
-	node->next = temp->next;
-	temp->next = node;
+	cout << endl;
 }
 
-
-int count(PNode head) {
-	PNode temp = head;
+int Struct::amount() {
 	int n = 0;
-	while (temp) {
-		if (temp->elem % 4 == 0) {
+	Node* temp = this->head;
+	while (temp != nullptr) {
+		if (temp->value % 4 == 0) {
 			n++;
 		}
 		temp = temp->next;
@@ -39,23 +37,15 @@ int count(PNode head) {
 	return n;
 }
 
-void exchange(PNode head) {
+void Struct::exchange() {
 	int n = 0;
-	PNode temp = head;
-	while (temp) {
+	Node* temp = this->head;
+	while (temp != nullptr) {
 		if (n % 2 == 0) {
-			temp->elem = 0;
+			temp->value = 0;
 		}
 		n++;
 		temp = temp->next;
 	}
 }
 
-void output(PNode head) {
-	PNode temp = head;
-	while (temp) {
-		cout << temp->elem << " ";
-		temp = temp->next;
-	}
-	cout << endl;
-}

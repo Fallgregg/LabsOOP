@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static System.Console;
 
 namespace Lab_07_Csh_
@@ -11,38 +7,39 @@ namespace Lab_07_Csh_
     {
         static void Main(string[] args)
         {
-            var node = new MyStruct();
+            var rand = new Random();
+            var test = new Struct();
             short el;
             int n;
-            short add;
-            WriteLine("Enter first element: ");
-            el = short.Parse(ReadLine());
-            node = new MyStruct();
-            node.push(el);
-
+            int add;
             int size = 0;
+
             WriteLine("Enter number of elemetns in your list: ");
             size = Convert.ToInt32(ReadLine());
 
-            Write("Enter elements: \n");
-            for (int i = 0; i < size; i++)
+            WriteLine("Enter first element: ");
+            el = short.Parse(ReadLine());
+            test = new Struct();
+            test.push(el);
+
+            for (int i = 0; i < size - 1; i++)
             {
-                add = short.Parse(ReadLine());
+                add = rand.Next(10, 100);
                 if(add >= -32768 && add <= 32767)
                 {
-                    node.push(add);
+                    test.push(add);
                 }
             }
 
             WriteLine($"List: ");
-            node.output();
+            test.output();
 
-            n = node.count();
+            n = test.count();
             WriteLine($"\n\nNumber of elements multiple 4: {n}");
 
-            node.exchange();
+            test.exchange();
             WriteLine($"\nNew list: ");
-            node.output();
+            test.output();
 
             ReadKey();
         }
