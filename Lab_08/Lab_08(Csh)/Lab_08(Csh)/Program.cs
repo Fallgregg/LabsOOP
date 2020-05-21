@@ -9,7 +9,7 @@ namespace Lab_08_Csh
         delegate bool findL(char ch);
         static void Main(string[] args)
         {
-            Write("Enter the sixe of queue: ");
+            Write("Enter the size of queue: ");
             int size = Convert.ToInt32(ReadLine());
             MyQueue line = new MyQueue(size);
 
@@ -37,6 +37,7 @@ namespace Lab_08_Csh
                         break;
                     case 2:
                         WriteLine($"\nChracter deleted: '{line.Dequeue()}'\n");
+                        line.Notify += DisplayMessage;
                         break;
                     case 3:
                         Write("\nEnter character to find: ");
@@ -64,7 +65,7 @@ namespace Lab_08_Csh
 
         private static void DisplayMessage(object sender, EventArgs message)
         {
-            Console.WriteLine(message);
+            Console.WriteLine("Queue is empty!");
         }
     }
 }
